@@ -1,9 +1,9 @@
-
 /**
  * Describe about subject of year 2 in IP class.
  * @author DY Daly
- * @version 1.0
+ * @version 1.1
  * @modified 01/11/2025
+ * @update: throw exception when name is and empty string or null.
  */
 
 import lombok.Getter;
@@ -26,7 +26,14 @@ public class Subject {
 	           "Subject Code: " + subjectCode + "\n" +
 	           "Number of Credits: " + numberofCredits;
 	}
-
-}	
+	
+	public void setName(String name) {
+	    if (name == null || name.trim().isEmpty()) {
+	        throw new IllegalArgumentException("Subject name cannot be null or empty.");
+	    }
+	    this.subjectName = name;
+	}
+}
+	
 
 
