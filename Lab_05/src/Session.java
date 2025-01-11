@@ -29,7 +29,7 @@ public class Session {
         this.startTime = startTime;
         this.endTime = endTime;
     }
-
+}
     public void setDuration(int startTime, int endTime) throws IllegalArgumentException {
         if (startTime >= endTime) {
             throw new IllegalArgumentException("Start time must be less than end time.");
